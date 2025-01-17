@@ -1,0 +1,26 @@
+Poznanie Agile,czym jest, jak działa (podsumowanie):
+Czym jest Agile?
+Agile to noweczesne podejście do zarządzania projektami, skupiając się na elastyczności, poprawianiu błędów oraz bliskiej pracy z klientem.Powstało na bazie Manifestu Agile, który promuje:
+-Ludzi i interakcje ponad procesy i narzędzia.
+-Działające oprogramowanie ponad obszerną dokumentacje.
+-Współprace z klientem ponad negocjowanie kontraktów.
+-Reagowanie na zmiany ponad realizacje planu.
+Jak wygląda praca w Sprintach?
+1. Sporządzenie całej listy zadań (Product Backlog) przez Product Ownera.
+2.Zaplanowanie Strintów przez zespół, czyli wybranie zadań z Backlog`u oraz okreslenie czasu na zrobienie tego zadania/zadań.
+3.Codzienna praca:
+-(Daily Standup) codzienne spotkanie w ramach lepszej koordynacji pracy nad zadaniami.
+-Zespół realizuje zadania na podstawie definicji "Done"
+4.Retrospektywa:
+-Przy każdym zakończeniu Sprintu zespół analizuje wyniki,sukcesy oraz miejsca do poprawy.
+Zalety i wady:
+Zalety:
+-Szybkie dostosowywanie do zmianiających się planów wymagań
+-Regularna współpraca z klientem dobrze wpływa na dokładne dopasowanie produktu do potrzeb
+-Szybkie wdrążanie funkcjonalności
+-Lepsza komunikacja w zespole i wymiana informacji
+Wady:
+-Trudność w oszacowaniu trwania projektu oraz kosztów poprzez możliwe częste zmiany
+-każdy z osobna w zespole musi być odpowiedzialny i zmotywowany do pracy
+- Zależność od zaangarzowania klienta: jesli nie będzie egularnej komunikacji z klientem może to negatywnie wpłynąć na produkt
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
