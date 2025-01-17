@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+     <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABMlBMVEUAAAATFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBYTFBb///8xfugBAAAAZHRSTlMAAAMeEgs1ZpjVs0sIHE97uu3+86A7CjRll9f56Ysrfbjs23UdymAR+rZOCfSiPeqNLNx3yxWr/IzGtw7xUaQG5o8B1ipA2nAQ8p4t/chYhBuw+LRSbGfwmnzFVAWS4n8ZR51GzSvczwAAAAFiS0dEZbXdiJ8AAAAHdElNRQflCw0LGjp1kwXVAAABDklEQVQ4y4WTV1PCABCEs8GCigJBEYkUFRBEsaNSQwiIiIgFu9ju//8GGQadBJLLvu73sHO3Kwj/guiYgGAhYHJq2jkzO+cyQyDOL7g9XomIfItL4ggC/3JgJSjTn1ZDYRiQSHRNIoPWN2J6hMYlxROb4ACiZGorDQ4g2t7JDNOSlXb39gdRyFoHh44+wgAkHSWOWaCfNmsDnJzaAGcxHpADfEjK5XmgUAR7ByqVeUDJ2FyyovJAVQP3LDlXAwfUzxtg+nDRvARTmNZVu8xVTrnu6Et7UzDat3c11VD79L1H1vnBbn50W2g8xFtD+/FJw/j2gM5zfRDu5fXNfL2A9q5Q7+MT1usWv75/VDP7F2c5AfzSvpg9AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTExLTEzVDExOjI2OjQzKzAwOjAwpxYjjwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0xMS0xM1QxMToyNjo0MyswMDowMNZLmzMAAAAgdEVYdHNvZnR3YXJlAGh0dHBzOi8vaW1hZ2VtYWdpY2sub3JnvM8dnQAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpIZWlnaHQAMTkyQF1xVQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE2MzY4MDI4MDM+EAdeAAAAD3RFWHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zhdmljb25zLzIwMjEtMTEtMTMvZDhlYWQyNDYwOTQ4ZjM5MGM5YzkwODMxMDVkMDlkMTAuaWNvLnBuZ5MiDi4AAAAASUVORK5CYII=">
+    <title>App IDs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0078d7;
+            color: white;
+        }
+
+        input {
+            width: 90%;
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 16px;
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .return-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .add-row-btn {
+            background-color: #ff9900;
+            color: white;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>App IDs</h1>
+    <table id="tbl">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>App ID</th>
+                <th>URL</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be added dynamically -->
+        </tbody>
+    </table>
+
+    <div class="button-container">
+        <button class="add-row-btn" onclick="addRow()">Add Row</button>
+        <button class="submit-btn" onclick="submitData()">Submit</button>
+        <button class="return-btn" onclick="window.location.href='/edit'">Return</button>
+    </div>
+
+    <script>
+        let currentId = 1000;
+        const deletedRows = [];
+        fetch('/app_ids')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.querySelector('#tbl tbody');
+                data.forEach(app => addRowToTable(tbody, app.id, app.app_id, app.url));
+            })
+            .catch(console.error);
+    
+        function addRow() {
+            const tbody = document.querySelector('#tbl tbody');
+            addRowToTable(tbody, currentId++, '', '', 'new');
+        }
+    
+        function addRowToTable(tbody, id, app_id, url, status = 'unchanged') {
+            const row = document.createElement('tr');
+            row.dataset.status = status;
+    
+            row.innerHTML = `
+                <td><input type="text" value="${id}" readonly></td>
+                <td><input type="text" value="${app_id}" onchange="checkRowStatus(this)" data-original=""></td>
+                <td><input type="text" value="${url}" onchange="checkRowStatus(this)" data-original=""></td>
+                <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+            `;
+    
+            tbody.appendChild(row);
+        }
+    
+        function deleteRow(button) {
+            const row = button.closest('tr');
+            const inputs = row.querySelectorAll('input');
+            const id = inputs[0].value;
+    
+            if (row.dataset.status !== 'new') {
+                deletedRows.push({ id, status: 'deleted' });
+            }
+    
+            row.remove();
+            console.log('Row deleted');
+        }
+    
+        function checkRowStatus(inputElement) {
+            const row = inputElement.closest('tr');
+            const inputs = row.querySelectorAll('input');
+    
+            const id = inputs[0].value;
+            const app_id = inputs[1].value;
+            const url = inputs[2].value;
+            const originalapp_id = inputs[1].dataset.original;
+            const originalUrl = inputs[2].dataset.original;
+    
+            let status = row.dataset.status;
+    
+            if (status === 'new') {
+                return;
+            }
+            if (app_id !== originalapp_id || url !== originalUrl) {
+                status = 'changed';
+            } else {
+                status = 'unchanged';
+            }
+    
+            row.dataset.status = status;
+            console.log(`Row status updated: ${status}`);
+        }
+    
+        function submitData() {
+            const tableRows = document.querySelectorAll('#tbl tbody tr');
+            const newRows = [];
+            const changedRows = [];
+            const unchangedRows = [];
+    
+            tableRows.forEach(row => {
+                const inputs = row.querySelectorAll('input');
+                const id = inputs[0].value;
+                const app_id = inputs[1].value;
+                const url = inputs[2].value;
+                const status = row.dataset.status;
+    
+                const rowData = { id, app_id, url, status };
+    
+                if (status === 'new') {
+                    newRows.push(rowData);
+                } else if (status === 'changed') {
+                    changedRows.push(rowData);
+                } else if (status === 'unchanged') {
+                    unchangedRows.push(rowData);
+                }
+            });
+    
+            console.log('=== Aktualny Stan ===');
+            console.log('Nowe wiersze (newRows):', newRows);
+            console.log('Zmienione wiersze (changedRows):', changedRows);
+            console.log('Nie zmienione wiersze (unchangedRows):', unchangedRows);
+            console.log('Usunięte wiersze (deletedRows):', deletedRows);
+            console.log('================================');
+    
+            saveNewDataToServer(newRows);
+            uploadChangedDataToServer(changedRows);
+            deletedRows.forEach(row => deleteDataFromServer(row.id));
+        }
+    
+        function saveNewDataToServer(newRows) {
+            newRows.forEach(item => {
+                console.log('Wysyłane dane:', item);
+                fetch('/app_ids', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(item)
+                }).then(response => {
+                    if (!response.ok) {
+                        console.error('Błąd podczas wysyłania danych:', item);
+                    } else {
+                       // console.log('Dodano nowy wiersz:', item);
+                    }
+                }).catch(console.error);
+            });
+        }
+    
+        function uploadChangedDataToServer(changedRows) {
+            changedRows.forEach(row => {
+                const { id, app_id, url } = row;
+    
+                fetch(`/app_ids/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ app_id: app_id, url })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        console.error(`Błąd podczas aktualizacji App ID: ${id}`, response.statusText);
+                    } else {
+                        console.log(`Zaktualizowano App ID ${id}:`, row);
+                    }
+                })
+                .catch(error => {
+                    console.error(`Błąd sieci podczas aktualizacji App ID: ${id}`, error);
+                });
+            });
+        }
+    
+        function deleteDataFromServer(rowId) {
+            fetch(`/app_ids/${rowId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    console.error(`Błąd podczas usuwania App ID: ${rowId}`, response.statusText);
+                } else {
+                    console.log(`App ID ${rowId} został pomyślnie usunięty.`);
+                }
+            })
+            .catch(error => {
+                console.error(`Błąd sieci podczas usuwania App ID: ${rowId}`, error);
+            });
+        }
+    </script>
+    
+    
+    
+    
+</body>
+</html>
