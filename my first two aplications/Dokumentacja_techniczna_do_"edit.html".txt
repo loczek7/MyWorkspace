@@ -1,0 +1,20 @@
+ADMINVC-EDIT
+
+Projekt ADMINVC-EDIT to narzędzie służące do edycji danych dotyczących aplikacji takich jak nazwa aplikacji,ID,adres IP,domena, wersja aplikacji, kometarz itp.
+Interfejs umożliwia edycję,dodawanie,usuwanie i przesyłanie danych do servera.
+
+Funkcjonalność:
+1.Wczytywanie i wyświetlanie danych do tabeli z bazy danych.
+2.Dynamiczne generowanie dodawanych wierszy poprzez kliknięcie przycisku.
+3.Możliwość edytowania istniejących danych.
+4.Usuwanie wierszy lokalnie jak i na serwerze.
+5.Walidacja dat: Obsługiwanie jedynie formatu dat(YYYY-MM-DD).
+6.Powiadomienia użytkownika w formie alertów (sukcesów oraz błędów).
+7.Synchronizacja (zapisywanie/aktualizowanie) danych z serverem za pomocą przycisku.
+8.Sprawdzanie stanu wierszy (New, Changed, Unchanged) w ramach prostrzego znalezienia ostatnich zmian.
+9.Wykorzystanie danych zaciągnietych poprzez "fetch('/app_ids')" do stworzenia wyboru AppID z listy.
+10.Łącze do aplikacji pod adresem "http://127.0.0.1:5000/appids".
+11.Przycisk umozliwiający powrót do strony głównej pod adresem "http://127.0.0.1:5000".
+
+Struktura projektu:
+
