@@ -17,4 +17,53 @@ Funkcjonalność:
 11.Przycisk umozliwiający powrót do strony głównej pod adresem "http://127.0.0.1:5000".
 
 Struktura projektu:
+HTML: Plik edit.html odpowiada za strukturę aplikacji i jej widok.
+CSS : Stylizacja interfejsu, m.in. tabela, przyciski, alerty.
+JavaScript : Obsługa logiki aplikacji, takich jak operacje na danych i komunikowanie się z serwerem.
 
+Szczegóły
+2. Przycisk "Add row":
+2.1 Przycisk dodawania wierszy ma się znajdować na środku strony na samym dole.
+2.2 Nowo dodane wiersze mają otrzymywać numeryczne ID od 1000 w górę.
+
+5. Walidacja dat:
+5.1 Podczas zapisywania danych poprzez przycisk Submit strona ma odrzucić działanie, jeśli użytkownik nie wpisał daty, bądź wpisał ale w złym formacie. Dopuszczalny format dat :YYYY-MM-DD.
+
+6.Alerty :
+6.1 Alert/powiadomienie dla uźytkownika ma się pojawić w sytuacji wpisania daty w złym formacie oraz ma się wyświetlić poprawny format w alercie.
+Tak samo przy braku dany ma się wyswietlić alert powidamiający o wpisaniu date do tabeli.
+6.2 Alerty mają być czerwone na błędów/errorów natomiast zielone dla sukcesów.
+6.3 Alert również ma się wyświetlać jako potwierdzenie zapisania danych jak i usunięcia.
+
+7. Zapisywanie danych na serwer:
+7.1 Dane zapisywane na server muszą być zapisywane pojedyńczo poprzez metodę "POST.
+7.2 Tak samo jak dane zapisywane dane usuwane muszą być usuwane pojedyńczo.
+7.3 Dane, które zostały zmienione należy zaktualizować w bazie danych również aktualizowane pojedyńczo.
+
+8. Funkcja sprawdzająca stan aktualnych wierszy:
+8.1 Funkcja ma sprawdzać czy dane w wierszach zostały zmienione(Changed) albo nowo dodane(New), bądź niezmienione(Unchanged).
+8.2 Na podstawie "8.1" mają być odpowiedznio aktualizowane dane na serwerze.
+
+9.Dane zaciągniete poprzez "fetch('/app_ids')" mają zostać wykorzystane do stworzenia w tabeli elementu <select> w którym będą znajdowały się 
+pojedyńcze elementy z tej bazy danych a dokładnie tylko "app_id", któr mają być wybierane z rozwijanej listy.
+
+10. Łącze w postaci "+" obok rozwijanej wczesniej wspomnianej tablicy do podstrony "http://127.0.0.1:5000/appids".
+
+11. Przycisk "Return",który przekieuje użytkownika na strone główną o adresie "http://127.0.0.1:5000".
+
+Diagram architektury systemu:
+[User] --> [Web Application Frontend] --> [Backend API] --> [Database]
+
+Obsługiwane EndPointy:
+
+pobieranie danych do listy <select> - "fetch('/app_ids')
+
+usuwanie danych - DELETE/delete/${"id wiersza usuwanego"}
+
+zapisywanie danych - POST/new 
+
+aktualizowanie danych - PUT/edit/${id wiersza do aktualizacji}
+
+Wszystkie dane są wysyłane w formacie JSON
+
+Podsumowanie: Aplikacja to narzędzie do edytowania bazy danych aby usprawnić szybkość wykonywania tego.
