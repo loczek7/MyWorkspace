@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtry</title>
+    <link rel="stylesheet" href="Filtry.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Filtry</h1>
+
+        <button onclick="toggleFilters()">Filtruj</button>
+
+        <div class="filters" id="filters" style="display: none;">
+            <div class="filter-section">
+                <h3>Imiona</h3>
+                <div id="nameFilter" class="filter-list"></div>
+            </div>
+            <div class="filter-section">
+                <h3>Wiek</h3>
+                <div id="ageFilter" class="filter-list"></div>
+            </div>
+            <button onclick="applyFilters()">Zastosuj filtry</button>
+            <button onclick="clearFilters()">Wyczyść filtry</button>
+        </div>
+
+        <div id="dataContainer"></div>
+    </div>
+
+    <script src="Filtry_js_.js"></script>
+</body>
+</html>
