@@ -24,3 +24,34 @@ Wady:
 -każdy z osobna w zespole musi być odpowiedzialny i zmotywowany do pracy
 - Zależność od zaangarzowania klienta: jesli nie będzie egularnej komunikacji z klientem może to negatywnie wpłynąć na produkt
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+English version:
+Understanding Agile: What It Is and How It Works (Summary):
+
+What is Agile?
+Agile is a modern approach to project management, focusing on flexibility, error correction, and close collaboration with the client. It is based on the Agile Manifesto, which promotes:
+- Individuals and interactions over processes and tools.
+- Working software over comprehensive documentation.
+- Customer collaboration over contract negotiation.
+- Responding to change over following a plan.
+
+How Does Work in Sprints Look?
+1. Creating the entire list of tasks (Product Backlog) by the Product Owner.
+2. Planning Sprints by the team, i.e., selecting tasks from the Backlog and determining the time required to complete the task(s).
+3. Daily work:
+   - (Daily Standup) daily meetings for better coordination of work on tasks.
+   - The team completes tasks based on the definition of "Done."
+4. Retrospective:
+   - At the end of each Sprint, the team analyzes results, successes, and areas for improvement.
+
+Advantages and Disadvantages:
+Advantages:
+- Quick adaptation to changing requirements.
+- Regular collaboration with the client positively impacts the precise adjustment of the product to needs.
+- Fast implementation of functionalities.
+- Better team communication and information exchange.
+
+Disadvantages:
+- Difficulty in estimating project duration and costs due to possible frequent changes.
+- Each team member must be responsible and motivated to work.
+- Dependence on client involvement: if there is no regular communication with the client, it may negatively affect the product.
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -67,3 +67,73 @@ aktualizowanie danych - PUT/edit/${id wiersza do aktualizacji}
 Wszystkie dane są wysyłane w formacie JSON
 
 Podsumowanie: Aplikacja to narzędzie do edytowania bazy danych aby usprawnić szybkość wykonywania tego.
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+English version:
+ADMINVC-EDIT
+
+The ADMINVC-EDIT project is a tool for editing application data such as application name, ID, IP address, domain, application version, comments, etc.
+The interface allows editing, adding, deleting, and sending data to the server.
+
+Functionality:
+1. Loading and displaying data in a table from the database.
+2. Dynamically generating added rows by clicking a button.
+3. Ability to edit existing data.
+4. Deleting rows both locally and on the server.
+5. Date validation: Only supporting date format (YYYY-MM-DD).
+6. User notifications in the form of alerts (success and error messages).
+7. Synchronization (saving/updating) of data with the server using a button.
+8. Checking row status (New, Changed, Unchanged) to easily identify recent changes.
+9. Using data fetched via "fetch('/app_ids')" to create an AppID selection list.
+10. Application link available at "http://127.0.0.1:5000/appids".
+11. Button allowing a return to the homepage at "http://127.0.0.1:5000".
+
+Project Structure:
+HTML: The edit.html file defines the application’s structure and layout.
+CSS: Styles the interface, including the table, buttons, and alerts.
+JavaScript: Handles application logic, such as data operations and server communication.
+
+Details:
+2. "Add row" button:
+2.1 The row addition button should be positioned at the bottom center of the page.
+2.2 Newly added rows should receive numerical IDs starting from 1000 and above.
+
+5. Date Validation:
+5.1 When saving data using the Submit button, the page should reject the action if the user has not entered a date or entered it in the wrong format. The allowed date format is YYYY-MM-DD.
+
+6. Alerts:
+6.1 An alert/notification should appear if the user enters a date in the wrong format, displaying the correct format in the alert.
+Similarly, if no date is entered, an alert should notify the user to enter a date in the table.
+6.2 Alerts should be red for errors and green for successes.
+6.3 An alert should also be displayed as confirmation of data saving or deletion.
+
+7. Saving Data to the Server:
+7.1 Data saved on the server must be stored individually using the "POST" method.
+7.2 Similarly, deleted data must be removed individually.
+7.3 Modified data should be updated in the database individually.
+
+8. Function to Check Row Status:
+8.1 The function should check whether data in the rows has been changed (Changed), newly added (New), or unchanged (Unchanged).
+8.2 Based on "8.1", data should be appropriately updated on the server.
+
+9. Data fetched via "fetch('/app_ids')" should be used to create a <select> element in the table containing individual elements from this database, specifically "app_id", which should be selected from the dropdown list.
+
+10. A "+" link next to the previously mentioned dropdown table leading to the subpage "http://127.0.0.1:5000/appids".
+
+11. "Return" button that redirects the user to the homepage at "http://127.0.0.1:5000".
+
+System Architecture Diagram:
+[User] --> [Web Application Frontend] --> [Backend API] --> [Database]
+
+Supported Endpoints:
+
+Fetching data for the <select> list - "fetch('/app_ids')"
+
+Deleting data - DELETE/delete/${"ID of the deleted row"}
+
+Saving data - POST/new 
+
+Updating data - PUT/edit/${ID of the row to update}
+
+All data is sent in JSON format.
+
+Summary: The application is a tool for editing the database to improve the speed of performing this task.
