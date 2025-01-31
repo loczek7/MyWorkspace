@@ -8,26 +8,38 @@
 </head>
 <body>
     <div class="container">
-        <h1>Filtry</h1>
-
-        <button onclick="toggleFilters()">Filtruj</button>
-
-        <div class="filters" id="filters" style="display: none;">
-            <div class="filter-section">
-                <h3>Imiona</h3>
-                <div id="nameFilter" class="filter-list"></div>
-            </div>
-            <div class="filter-section">
-                <h3>Wiek</h3>
-                <div id="ageFilter" class="filter-list"></div>
-            </div>
-            <button onclick="applyFilters()">Zastosuj filtry</button>
-            <button onclick="clearFilters()">Wyczyść filtry</button>
-        </div>
-
+        <h1>Filters</h1>
+        <button onclick="toggleFilters()">Filter</button>
+<div id="filters" style="display: none;">
+    <div id="nameFilter">
+        <label for="nameSelect">Chose filters:</label>
+        <select id="nameSelect" multiple>
+            <option value="">--NONE--</option>
+        </select>
+    </div>
+    <div id="salesProfitFilter">
+        <label for="profitRange">Filter by profit:</label>
+        <input type="number" id="profitMin" placeholder="Min" />
+        <input type="number" id="profitMax" placeholder="Max" />
+    </div>
+    <button onclick="applyFilters()">Submit</button>
+    <button onclick="clearFilters()">Clear</button>
+</div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Employee ID</th>
+                    <th>Purch Currency</th>
+                    <th>Sales Profit</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
         <div id="dataContainer"></div>
     </div>
-
     <script src="Filters_js.js"></script>
 </body>
 </html>
