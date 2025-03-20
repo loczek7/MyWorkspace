@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <title>Projekt Allegro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="up-section">
+            <div class="in-section">
+                <a class="logo speak" href="Alledrogo_main_page.html">alledrogo</a>
+                <div class="search-container">
+                    <input class="searchbar speak" type="text" placeholder="czego szukasz?"><!--Tutaj nie działa jeszcze speak-->
+                    <span class="search-label speak" id="searchLabel" tabindex="0">szukaj wielu</span>
+
+                    <span class="category speak" id="searchLabelCategory" tabindex="0">
+                        Wszystkie kategorie
+                        <img src="./svg/arrow.svg" alt="arrow" class="arrow-icon">
+                        <div class="dropdown-menu-category" id="dropdownMenuSearchLabelCategory">
+                            <a href="#" class="speak">Allegro days</a>
+                            <hr>
+                            <a href="#" class="speak">Dom i Ogród</a>
+                            <a href="#" class="speak">Diecko</a>
+                            <a href="#" class="speak">Elektronika</a>
+                            <a href="#" class="speak">Firma i usługi</a>
+                            <a href="#" class="speak">Kolekcje i sztuka</a>
+                            <a href="#" class="speak">Kultura i rozrywka</a>
+                            <a href="#" class="speak">Moda</a>
+                            <a href="#" class="speak">Motoryzacja</a>
+                            <a href="#" class="speak">Nieruchomości</a>
+                            <a href="#" class="speak">Sport i Turystyka</a>
+                            <a href="#" class="speak">Supermarket</a>
+                            <a href="#" class="speak">Uroda</a>
+                            <a href="#" class="speak">Zdrowie</a>
+                            <hr>
+                            <a href="#" class="speak">Cele charytatywne</a>
+                            <a href="#" class="speak">Organizacje charytatywne</a>
+                            <a href="#" class="speak">Sprzedawcy</a>
+                            <a href="#" class="speak">Zakończone</a>
+                            
+                        </div>
+                    </span>
+                    <button class="search-button speak">SZUKAJ</button>
+                    <div class="icons">
+                        <a href="#"><img src="./svg/delivery.svg" alt="Przesyłki" class="icon-look"></a><!--Tutaj nie działa jeszcze speak-->
+                        <a href="#"><img src="./svg/fav.svg" alt="Ulubione" class="icon-look"></a><!--Tutaj nie działa jeszcze speak-->
+                        <a href="#"><img src="./svg/chat.svg" alt="Czat" class="icon-look"></a><!--Tutaj nie działa jeszcze speak-->
+                        <a href="#"><img src="./svg/notify.svg" alt="Powiadomienia" class="icon-look"></a><!--Tutaj nie działa jeszcze speak-->
+                        <a href="#"><img src="./svg/orders.svg" alt="Mój koszyk" class="icon-look"></a><!--Tutaj nie działa jeszcze speak-->
+                    </div>
+                    <span class="user speak" tabindex="0">Moje Allegro
+                        <img src="./svg/arrow.svg" alt="arrow" class="arrow-icon2">
+                        <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#" class="speak">Moje zakupy</a>
+                        <a href="#" class="speak">Kup ponownie</a>
+                        <a href="#" class="speak">Licytuję</a>
+                        <a href="#" class="speak">Ulubione</a>
+                        <a href="#" class="speak">Oceń produkty <span class="new">NOWOŚĆ</span></a>
+                        <a href="#" class="speak">Oceń sprzedawcę</a>
+                        <hr>
+                        <a href="#" class="speak">Allegro Smart!</a>
+                        <a href="#" class="speak">Kupony i karty podarunkowe</a>
+                        <a href="#" class="speak">Smart! Monety</a>
+                        <a href="#" class="speak" id="openSecondPopupLink">Ustawienia</a>
+                        </div>
+                      </span>
+                </div>  
+            </div>
+        </div>
+     <div class="underheader">
+        <div class="in-section">
+            <span class="category-under speak" id="categoryTrigger" tabindex="0">
+                Kategorie
+                <img src="./svg/arrow.svg" alt="arrow" class="arrow-icon3">
+                <div class="dropdown-menu-category-under" id="dropdownMenuCategory">
+                    <ul class="categories">
+                        <!-- Kategorie generowane dynamicznie -->
+                    </ul>
+                    <div class="subcategories">
+                        <ul id="subCategoriesList">
+                            <!-- Podkategorie będą się tutaj wyświetlały -->
+                        </ul>
+                    </div>
+                </div>
+            </span>
+            
+            
+        <div class="cateallegro">
+            <span tabindex="0" class="speak"><img src="./svg/Days.svg" alt="Allegro Days" > Allegro Days</span>
+            <span tabindex="0" class="speak"><img src="./svg/protect.svg" alt="Allegro Protect"> Allegro Protect</span>
+            <span tabindex="0" class="speak"><img src="./svg/sell allegro.svg" alt="Sprzedawaj na Allegro"> Sprzedawaj na Allegro</span>
+            <span tabindex="0" class="speak"><img src="./svg/lowpirce.svg" alt="Gwarancja najniższej ceny"> Gwarancja najniższej ceny</span>
+            <span tabindex="0" class="speak"><img src="./svg/3dots.svg" alt="Trzy Kropki ..."></span>
+        </div>
+        <div class="wcag speak" tabindex="0">DOSTĘPNOŚĆ</div>
+        <span class="smart" tabindex="0">bądź<img src="./svg/smart.svg" alt="bądź smart"></span>
+      </div>
+    </div>
+</div>   
+<div class="center-section">
+    <div class="banner">
+        <img src="./svg/bannerphoto.png" alt="reklama_dzienkobiet" id="imagebanner" class="banner-img">
+        <span class="arrow-banner" id="arrow-banner"><img src="./svg/arrow.svg" alt="przesuwanie reklam" class="arrow-banner-icon"></span> 
+        <div class="dots" id="dotsContainer">
+            <span class="dot active">•</span>
+            <span class="dot">•</span>
+            <span class="dot">•</span>
+            <span class="dot">•</span>
+            <span class="dot">•</span>
+        </div>
+    </div>
+    <div class="under-center-section">
+        <div class="list-items">
+            <span class="items speak" tabindex="0"><img src="./img/allegro days 1.png" alt="przesuwanie reklam" class="items-banner-icon">Okazje dla Smartowiczów</span>
+            <span class="items speak" tabindex="0"><img src="./img/prezenty na dzien kobiet 1.png" alt="przesuwanie reklam" class="items-banner-icon">Prezenty ma Dzień Kobiet</span>
+            <span class="items speak" tabindex="0"><img src="./img/łap niskie ceny 1.png" alt="przesuwanie reklam" class="items-banner-icon">Łap niskie ceny</span>
+            <span class="items speak" tabindex="0"><img src="./img/zgarnij kupon 100 zl 1.png" alt="przesuwanie reklam" class="items-banner-icon">Zgarnij kupon 100 zł</span>
+            <span class="items speak" tabindex="0"><img src="./img/smart! na rok 20 zl taniej 1.png" alt="przesuwanie reklam" class="items-banner-icon">Smart! na rok 20 zł taniej</span>
+            <span class="items speak" tabindex="0"><img src="./img/motoryzacja 1.png" alt="przesuwanie reklam" class="items-banner-icon">Motoryzacja</span>
+            <span class="items speak" tabindex="0"><img src="./img/dom i ogród 1.png" alt="przesuwanie reklam" class="items-banner-icon">Dom i ogród</span>
+            <span class="items speak" tabindex="0"><img src="./img/elektronika 1.png" alt="przesuwanie reklam" class="items-banner-icon">Elektronika</span>
+            <span class="items speak" tabindex="0"><img src="./img/moda 1.png" alt="przesuwanie reklam" class="items-banner-icon">Moda</span>
+            <span class="items speak" tabindex="0"><img src="./img/supermarket 1.png" alt="przesuwanie reklam" class="items-banner-icon">Supermarket</span>
+            <span class="items speak" tabindex="0"><img src="./img/sport i turystyka 1.png" alt="przesuwanie reklam" class="items-banner-icon">Sport i turystyka</span>
+        </div>
+    </div>
+<div class="section-offers">
+    <img src="./img/allegro + czarne 1.png" alt="przesuwanie reklam" class="banner-offers"></span>
+    <div class="offers">
+      <div class="product speak" tabindex="0">
+        <img src="./img/ADYY_1_201811098627323.jpg" alt="Laptop Dell Inspiron 15">
+        <div class="smart-deal">
+            <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">3399,00 zł</p>
+            </div>
+            <p class="info">
+                cena z 30 dni <span class="info-icon">ⓘ</span>
+            </p>
+        </div>
+        <p class="price">2999,99 zł</p>
+        <div class="top">
+            <img src="./img/zielona odznaka 1.png" alt="Ikona gwarancji">
+            <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+        </div>
+        <div class="sm">
+            <img src="./img/smart 3.png" alt="Ikona Smart">
+        </div>
+        <p>Laptop Dell Inspiron 15, alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <div class="top">
+            <p class="paylater">Zapłać później z</p>
+            <div class="pay">
+                <img src="./img/pay 1.png" alt="Logo płatności późniejszej">
+            </div>
+        </div>
+        <div class="delivery">
+            <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+        </div>
+    </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/ps5.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2457,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>PlayStation 5 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssss</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/iphone.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2699,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Telefon Iphone 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/ADYY_1_201811098627323.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">3399,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2999,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Laptop Dell Inspiron 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/ps5.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2457,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>PlayStation 5 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssss</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/iphone.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2699,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Telefon Iphone 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+                <div class="product speak" tabindex="0">
+            <img src="./img/ADYY_1_201811098627323.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">3399,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2999,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Laptop Dell Inspiron 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/ps5.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2457,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>PlayStation 5 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssss</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/iphone.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2699,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Telefon Iphone 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+</div>
+<div class="section-second-offers">
+    <span class="Title-offers">Gwarancja najniższej ceny </span>
+    <div class="second-offers">
+        <div class="product speak" tabindex="0">
+            <img src="./img/iphone.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2699,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Telefon Iphone 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/ps5.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2457,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>PlayStation 5 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssss</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/ADYY_1_201811098627323.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">3399,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2999,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Laptop Dell Inspiron 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/iphone.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2699,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Telefon Iphone 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/ps5.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2457,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>PlayStation 5 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssss</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/ADYY_1_201811098627323.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">3399,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2999,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Laptop Dell Inspiron 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/iphone.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2699,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Telefon Iphone 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/ps5.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">2457,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2199,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>PlayStation 5 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssss</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        <div class="product speak" tabindex="0">
+            <img src="./img/ADYY_1_201811098627323.jpg">
+              <div class="smart-deal">
+                <div class="top">
+                <p class="occassion">Smart! okazja</p>
+                <p class="old-price">3399,00 zł</p>
+                </div>
+                <p class="info">
+                    cena z 30 dni <span class="info-icon">ⓘ</span>
+                </p>
+              </div>
+            <p class="price">2999,99 zł</p>
+               <div class="top">
+                 <img src="./img/zielona odznaka 1.png">
+                 <p class="warranty">Gwarancja<br> najniższej<br> ceny</p>
+               </div>
+            <div class="sm">
+              <img src="./img/smart 3.png">
+            </div>
+            <p>Laptop Dell Inspiron 15 alalallalalalalallalalalalaalllallalalaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <div class="top">
+              <p class="paylater">Zapłać później z</p>
+              <div class="pay">
+              <img src="./img/pay 1.png">
+              </div>
+            </div>
+            <div class="delivery">
+              <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
+            </div>
+        </div>
+        
+
+</div>
+<div class="section-inpsiration" >
+    <span class="Title-inspiration">Znajdź inspiracje</span>
+    <span class="second-inspiration">z kategorii motoryzacja</span>
+    <div class="photos-inspiration">
+        <div class="inspiration speak">
+            <img src="./img/dzien mezczyzny 1.png" alt="Dzień Mężczyzny">
+            <span>Dzień Mężczyzny</span>
+        </div>
+        <div class="inspiration speak">
+            <img src="./img/wyszukiwarka czesci 1.png" alt="Wyszukiwarka części">
+            <span>Wyszukiwarka części</span>
+        </div>
+        <div class="inspiration speak">
+            <img src="./img/narzedzia i sprzet warsztatowy 1.png" alt="Narzędzia i sprzęt warsztatowy">
+            <span>Narzędzia i sprzęt warsztatowy</span>
+        </div>
+        <div class="inspiration speak">
+            <img src="./img/lodzie i skutery 1.png" alt="Łodzie i skutery">
+            <span>Łodzie i skutery</span>
+        </div>
+        <div class="inspiration speak">
+            <img src="./img/chemia 1.png" alt="Chemia">
+            <span>Chemia</span>
+        </div>
+        <!-- Dodaj więcej elementów wg potrzeb -->
+    </div>
+</div>
+        <div class="footer-section">
+          <div class="questions-section">
+            <div class="question">
+              <span class="title-question">Rankingi</span>
+              <span class="questions">Rankingi wódo picia</span>
+              <span class="questions">Ranking Yerba Mate</span>
+              <span class="questions">Ranking zabawek dla kota</span>
+              <span class="questions">Najlepsze zabawki dla psó</span>
+              <span class="questions">Ranking żeli do prania</span>
+            </div>
+            <div class="question">
+              <span class="title-question">Premiery</span>
+              <span class="questions">Nowy Wiedźmin - Rozdroże </span>
+              <span class="questions">Kruków</span>
+              <span class="questions">Apple MacBook OLED</span>
+              <span class="questions">Samsung Galaxy M35 5G</span>
+              <span class="questions">iPad Air (2024)</span>
+            </div>
+            <div class="question">
+              <span class="title-question">Najczęściej czytane</span>
+              <span class="questions">Dysk zewnętrzny czy pendrive? </span>
+              <span class="questions">A może chmura? Poznaj wady i zalety każdego rozwiązania</span>
+              <span class="questions">Awaria podświetlenia deski </span>
+            </div>
+            <div class="question">
+              <span class="title-question">Rankingi</span>
+              <span class="questions">Rankingi wó do picia</span>
+              <span class="questions">Ranking Yerba Mate</span>
+              <span class="questions">Ranking zabawek dla kota</span>
+              <span class="questions">Najlepsze zabawki dla psó</span>
+              <span class="questions">Ranking żeli do prania</span>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="footer-view">
+              <span class="footer-title">Allegro</span>
+              <span class="footer-text">O nas</span>
+              <span class="footer-text">Allegro Share</span>
+              <span class="footer-text">Reklama</span>
+              <span class="footer-text">Allegro Ads</span>
+              <span class="footer-text">Allegro API</span>
+              <span class="footer-text">Praca w Allegro</span>
+              <span class="footer-text">Zrównoważony rozwój</span>
+              <span class="footer-text">Mapa strony</span>
+              <span class="footer-text">Rankingi produktów</span>
+              <span class="footer-text">Informacja o realizacji strategii podatkowej</span>
+              <span class="footer-text">Informacje dla Aktu o Usługach Cyfrowych i zgłaszanie produktów niebezpiecznych</span>
+              <span class="footer-text">Dodatkowe informacje o reklamie w Allegro i jej parametrach</span>
+              <span class="footer-text">Raport o przeciwdziałaniu rozpowszechniania treści o charakterze terrorystycznym</span>
+            </div>
+            <div class="footer-view">
+              <span class="footer-title">Centrum pomocy</span>
+              <span class="footer-text">Pomoc dla kupujących</span>
+              <span class="footer-text">Aktualności dla kupujących</span>
+              <span class="footer-text">Spytaj Społeczność</span>
+              <span class="footer-text">Dla kupujących</span>
+              <span class="footer-text">Pomoc dla sprzedających</span>
+              <span class="footer-text">Sprzedawaj na Allegro</span>
+              <span class="footer-text">Zwrot zakupu</span>
+              <span class="footer-text">Polityka prywatności mediów społecznościowych</span>
+              <span class="footer-text">Polityka plików "cookies"</span>
+              <span class="footer-text">Ustawienia plików "cookies"</span>
+              <span class="footer-text">Regulamin</span>
+              <span class="footer-text">Udostępnianie lokalizacji</span>
+              <span class="footer-text">Bezpieczeństwo</span>
+              <span class="footer-text">Sprzedaż międzynarodowa</span>
+            </div>
+            <div class="footer-view">
+              <span class="footer-title">Serwisy</span>
+              <span class="footer-text">Pomoc dla kupujących</span>
+              <span class="footer-text">Aktualności dla kupujących</span>
+              <span class="footer-text">Spytaj Społeczność</span>
+              <span class="footer-text">Dla kupujących</span>
+              <span class="footer-text">Pomoc dla sprzedających</span>
+              <span class="footer-text">Sprzedawaj na Allegro</span>
+              <span class="footer-text">Zwrot zakupu</span>
+              <span class="footer-text">Polityka prywatności mediów społecznościowych</span>
+              <span class="footer-text">Polityka plików "cookies"</span>
+              <span class="footer-text">Ustawienia plików "cookies"</span>
+              <span class="footer-text">Regulamin</span>
+              <span class="footer-text">Udostępnianie lokalizacji</span>
+              <span class="footer-text">Bezpieczeństwo</span>
+              <span class="footer-text">Sprzedaż międzynarodowa</span>
+            </div>
+            <div class="footer-view">
+              <span class="footer-title">Ustawienia wyświetlania</span>
+              <span class="footer-text">wygląd:<span class="footer-text" style="font-weight: bold;"> Motyw urządzenia</span></span>
+              <span class="footer-title">Ustawienia lokalizacji</span>
+              <span class="footer-text">Kraj<span class="footer-text" style="font-weight: bold;"> Polska</span></span>
+              <span class="footer-text">Kraj dostawy <span class="footer-text" style="font-weight: bold;"> Polska</span></span>
+              <span class="footer-text">Język<span class="footer-text" style="font-weight: bold;"> polski</span></span>
+              <span class="footer-text">Waluta<span class="footer-text" style="font-weight: bold;"> PLN</span></span>
+            </div>
+            <div class="footer-icons">
+              <div class="icons-download">
+                <img src="./img/appstore 1.png" title="Pobierz z AppStore">
+                <img src="./img/googlepaly 1.png" title="Pobierz z Google Play">
+                <img src="./img/appgallery 1.png" title="Pobierz z AppGallery">
+                <img src="./img/fb 1.png" title="Odwiedź nas na Facebooku">
+                <img src="./img/in 1.png" title="Odwiedź nas na LinkedIn">
+                <img src="./img/pin 1.png" title="Odwiedź nas na Instagramie">
+                <img src="./img/yt 1.png" title="Odwiedź nas na YouTube">
+                <img src="./img/serce.png" title="Serce">
+              </div>
+            </div>
+          </div>
+          <div class="footer-banner">alledrogo</div>
+          <div class="end-section">
+            <span class="end-text">serwisy grupy Allegro</span>
+            <div class="end-services">
+              <span class="end-text">Allegro.cz</span>
+              <span class="end-text">Allegro.sk</span>
+              <span class="end-text">Allegro.hu</span>
+              <span class="end-text">Mall.cz</span>
+              <span class="end-text">Mall.sk</span>
+              <span class="end-text">Mall.hr</span>
+              <span class="end-text">Mimovrste.com</span>
+              <span class="end-text">Onedelivery.cz</span>
+            </div>
+          </div>
+        </div>
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>
