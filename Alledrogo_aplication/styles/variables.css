@@ -1,0 +1,31 @@
+/* Variables for colors and fonts */
+:root {
+    /* Jasny tryb */
+    --primary-color: #ff6600;
+    --secondary-color: #ff8533;
+    --background-light: #F5F5F5;
+    --text-light: #000000;
+    --header-light: #ffffff;
+    --border-light: #BFBFBF;
+
+    /* Ciemny tryb */
+    --body-dark:#000000;
+    --background-dark: #181818;
+    --text-dark: #ffffff;
+    --header-dark: #1E1E1E;
+    --border-dark: #444444;
+
+    /* Fonty */
+    --font-family: "Open Sans", Arial, sans-serif;
+    --font-family-inter: "Inter", sans-serif;
+    --font-family-roboto: "Roboto", sans-serif;
+
+    /* Dodatkowe kolory elementów */
+    --price-color-light: green;
+    --price-color-dark: #90ee90;
+    --delivery-color-light: #1BB826;
+    --delivery-color-dark: #68d068;
+    --warranty-color-light: #4A8673;
+    --warranty-color-dark: #8fc8a8;
+}
+
