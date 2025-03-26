@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownMenu.addEventListener("click", function (event) {
         if (event.target.id === "openSecondPopupLink") {
             event.preventDefault();
-    
+
             let existingPopup = document.getElementById("secondPopup");
-    
+
             if (existingPopup) {
                 existingPopup.remove();
             } else {
@@ -53,11 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         <a href="#" id="closeSecondPopup">Zamknij</a>
                     </div>
                 `;
-    
+
                 const readingModeToggle = document.getElementById('readingModeToggle');
                 const darkModeToggle = document.getElementById('darkModeToggle');
                 const closeSecondPopup = document.getElementById('closeSecondPopup');
-    
+
                 function speak(text) {
                     if (readingModeToggle.checked) {
                         window.speechSynthesis.cancel();
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         window.speechSynthesis.speak(msg);
                     }
                 }
-    
+
                 readingModeToggle.addEventListener('change', function () {
                     if (this.checked) {
                         console.log("Włączono tryb czytania tekstu");
@@ -76,36 +76,51 @@ document.addEventListener("DOMContentLoaded", function () {
                         window.speechSynthesis.cancel();
                     }
                 });
-                
+
                 darkModeToggle.addEventListener('change', function () {
-                    if (this.checked) {
-                        setTheme('dark');
-                    } else {
-                        setTheme('light');
-                    }
+                    const icons = document.querySelectorAll('.icons img, .arrow-icon, .arrow-icon2, .arrow-icon3, .cateallegro img');
+
+                    icons.forEach(icon => {
+                        if (this.checked) {
+                            icon.src = icon.getAttribute('data-dark');
+                        } else {
+                            icon.src = icon.getAttribute('data-light');
+                        }
+                    });
+
+                    setTheme(this.checked ? 'dark' : 'light');
                 });
-    
+
                 function setTheme(theme) {
                     document.body.className = theme;
                     localStorage.setItem('theme', theme);
                 }
-    
+
                 const savedTheme = localStorage.getItem('theme') || 'light';
                 setTheme(savedTheme);
                 darkModeToggle.checked = (savedTheme === 'dark');
-    
+
+                const icons = document.querySelectorAll('.icons img, .arrow-icon, .arrow-icon2, .arrow-icon3, .cateallegro img');
+                icons.forEach(icon => {
+                    if (savedTheme === 'dark') {
+                        icon.src = icon.getAttribute('data-dark');
+                    } else {
+                        icon.src = icon.getAttribute('data-light');
+                    }
+                });
+
                 document.querySelectorAll('.speak').forEach(el => {
                     el.addEventListener('focus', () => speak(el.textContent.trim()));
                     el.addEventListener('mouseover', () => speak(el.textContent.trim()));
                     el.addEventListener('mouseleave', () => window.speechSynthesis.cancel());
                 });
-    
+
                 closeSecondPopup.addEventListener('click', function (event) {
                     event.preventDefault();
                     document.getElementById("secondPopup").remove();
                 });
             }
-    
+
             event.stopPropagation();
         }
     });

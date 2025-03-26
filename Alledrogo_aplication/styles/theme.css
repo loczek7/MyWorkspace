@@ -1,4 +1,5 @@
-body {
+
+html, body {
     background-color: var(--background-light);
     color: var(--text-light);
     font-family: var(--font-family);
@@ -127,11 +128,11 @@ body.dark .in-section a.logo {
 }
 
 .search-container {
-    background-color: var(--background-light);
+    /*background-color: var(--background-light);*/
 }
 
 body.dark .search-container {
-    background-color: var(--background-dark);
+    /*background-color: var(--background-dark);*/
 }
 
 .searchbar {
@@ -156,6 +157,11 @@ body.dark .searchbar::placeholder {
 
 .search-label, .category, .search-button, .user {
     color: var(--text-light);
+}
+
+.category.dark{
+    border-bottom: 1px solid var(--border-dark);
+    border-top: 1px solid var(--border-dark);
 }
 
 body.dark .search-label, body.dark .category, body.dark .search-button, body.dark .user {
@@ -195,7 +201,6 @@ body.dark .arrow-icon, body.dark .arrow-icon2 {
 }
 
 .underheader {
-    background-color: var(--header-light);
     color: var(--text-light);
 }
 
@@ -276,7 +281,7 @@ body.dark .smart img {
     filter: brightness(0.8);
 }
 
-body.dark .offers, body.dark .section-second-offers, body.dark .under-center-section, body.dark .banner, body.dark .second-inspiration, body.dark .inspiration span, body.dark .questions-section, body.dark .footer, body.dark .end-section {
+body.dark .offers, body.dark .section-second-offers, body.dark .under-center-section, body.dark .banner, body.dark .second-inspiration, body.dark .section-inpsiration, body.dark .inspiration span, body.dark .questions-section, body.dark .footer, body.dark .end-section {
     background-color: var(--background-dark);
 }
 
@@ -287,3 +292,13 @@ body.dark .banner.dots {
 body.light .second-inspiration {
     background-color: var(--background-light);
 }
+
+
+@media screen and (max-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+    html, body {
+        overflow-x: hidden; /* Dodane */
+    }
+
+  }

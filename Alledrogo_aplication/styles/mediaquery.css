@@ -1,0 +1,58 @@
+/* ----------- iPad Pro ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (max-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+/*Header*/
+
+.in-section {
+    width: 55rem;
+}
+
+.search-container {
+    margin-left: 1rem;
+}
+
+.search-label {
+    left: 8.15rem;
+    font-size: .7rem;
+}
+
+.search-button {
+    font-size: .7rem;
+}
+
+.under-section {
+    width: 60rem;;
+}
+
+.user {
+    font-size: 0; /* Ukrywa tekst */
+}
+.dropdown-menu{
+    font-size: 1rem; /* Ukrywa tekst */
+}
+
+.user .arrow-icon2 {
+    display: none; /* Ukrywa ikonę strzałki */
+}
+
+.user::before {
+    content: url('/svg/viewer.svg'); /* Zastępuje tekst ikoną */
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin: 0 0 .3rem -2.2rem;
+    opacity: 1;
+}
+
+.smart {
+    margin: 0 0 0 2rem;
+}
+
+    /*Center*/
+    .banner {
+        width: 100%;
+    }
+}

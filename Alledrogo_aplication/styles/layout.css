@@ -23,6 +23,7 @@
 
 .dots {
     position: absolute;
+box-sizing: border-box;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -41,10 +42,12 @@
     max-width: 90rem;
     height: auto;
     position: absolute;
+box-sizing: border-box;
 }
 
 .arrow-banner {
     position: absolute;
+box-sizing: border-box;
     width: 2.5rem;
     height: 2.5rem;
     background-color: #F5F5F5;
@@ -142,6 +145,7 @@
 
 .banner-offers {
     position: absolute;
+box-sizing: border-box;
     top: 0;
     left: 0;
     width: 100%;
@@ -162,6 +166,7 @@
     z-index: 5;
     margin-top: 65px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .section-second-offers {
@@ -193,8 +198,9 @@
     justify-content: flex-start;
     height: 25.9375rem;
     width: 100%;
+    background-color: #fff;
     padding: 1rem 0;
-    margin-top: 4rem;
+    margin-top: 7rem;
     position: relative;
     flex-wrap: wrap;
 }
@@ -224,6 +230,7 @@
 
 .inspiration span {
     position: absolute;
+box-sizing: border-box;
     bottom: 2rem;
     left: 0;
     width: 95%;
@@ -242,7 +249,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin: 0 auto;
-    margin-top: 62rem;
+    margin-top: 64rem;
+    position: relative;
 }
 
 .questions-section {
@@ -335,4 +343,109 @@
     justify-content: flex-start;
     padding: 0 2rem;
     width: 18rem;
+}
+
+
+/* ----------- iPad Pro ----------- */
+/* Portrait and Landscape */
+@media screen and (max-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+/*Header*/
+
+    .in-section {
+        width: 60rem;
+    }
+
+    .search-container {
+        margin-left: 2rem;
+    }
+
+
+    .search-label {
+        left: 8.15rem;
+        font-size: .7rem;
+    }
+
+    .search-button {
+        font-size: .7rem;
+    }
+
+    .under-section {
+        width: 60rem;;
+    }
+/*center*/
+.center-section {
+    width: 63rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.banner {
+    height: 25rem;
+}
+
+.under-center-section {
+    overflow-x: hidden; /* Zapobiega poziomemu przewijaniu */
+}
+
+.section-offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 30.9375rem;
+    width: 100%;
+    background-color: #FE6201;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Dodane */
+}
+
+.offers {
+    height: 22.9375rem;
+    width: 61rem;
+}
+
+.section-second-offers {
+    overflow: hidden; /* Dodane */
+}
+
+.second-offers {
+    height: 22.9375rem;
+    width: 61rem;
+}
+
+.section-inpsiration {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 22.9375rem;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 0;
+    margin-top: 4rem;
+    position: relative;
+    flex-wrap: wrap;
+    overflow: hidden; /* Dodane */
+}
+
+/*footer*/
+.footer-section {
+    width: 63rem;
+    margin-top: 1rem;
+}
+
+
+.question {
+    width: 16rem;
+}
+
 }
