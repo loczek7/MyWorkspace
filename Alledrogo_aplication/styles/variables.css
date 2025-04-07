@@ -27,5 +27,15 @@
     --delivery-color-dark: #68d068;
     --warranty-color-light: #4A8673;
     --warranty-color-dark: #8fc8a8;
+
+    /* Kolory dla Strony produktu */
+    --product-price-color-light: #3A4E58;
+    --product-price-color-dark: #638190;
+    --product-info-color-light-1: #f7f7f7;
+    --product-info-color-light-2:#ffffff;
+    --product-info-color-dark-1: #1d1c1c;
+    --product-info-color-dark-2: #272727;
+    --product-info-text-color-dark: #a6a4a4;
+    --product-info-text-color-light: #7f7f7f;
 }
 

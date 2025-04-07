@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
 
                     setTheme(this.checked ? 'dark' : 'light');
+                    updateUrlParams();
                 });
 
                 function setTheme(theme) {
@@ -96,7 +97,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     localStorage.setItem('theme', theme);
                 }
 
-                const savedTheme = localStorage.getItem('theme') || 'light';
+                function updateUrlParams() {
+                    const url = new URL(window.location);
+                    const params = new URLSearchParams(url.search);
+                    params.set('theme', darkModeToggle.checked ? 'dark' : 'light');
+                    window.history.replaceState({}, '', `${url.pathname}?${params.toString()}`);
+                }
+
+                const urlParams = new URLSearchParams(window.location.search);
+                const savedTheme = urlParams.get('theme') || 'light';
                 setTheme(savedTheme);
                 darkModeToggle.checked = (savedTheme === 'dark');
 

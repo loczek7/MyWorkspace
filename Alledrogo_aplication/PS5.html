@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allegro Search Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles/PS5_product.css">
+<link rel="stylesheet" href="./styles/components.css">
+<link rel="stylesheet" href="./styles/layout.css">
+<link rel="stylesheet" href="./styles/themeProductPage.css">
+<link rel="stylesheet" href="./styles/variables.css">
+<link rel="stylesheet" href="./styles/reset.css">
+</head>
+
+<body>
+<!-- Header Section -->
+<section class="header">
+  <div class="up-section">
+      <div class="in-section">
+          <a class="logo speak" href="Alledrogo_main_page.html">alledrogo</a>
+          <div class="search-container">
+              <input class="searchbar speak" type="text" placeholder="czego szukasz?"><!--Tutaj nie działa jeszcze speak-->
+              <span class="search-label speak" id="searchLabel" tabindex="0">szukaj wielu</span>
+
+              <span class="category speak" id="searchLabelCategory" tabindex="0">
+                  Wszystkie kategorie
+                  <img src="./svg/arrow.svg" alt="arrow" class="arrow-icon" data-light="./svg/arrow.svg" data-dark="./svg/arrowlight.svg">
+                  <div class="dropdown-menu-category" id="dropdownMenuSearchLabelCategory">
+                      <a href="#" class="speak">Allegro days</a>
+                      <hr>
+                      <a href="#" class="speak">Dom i Ogród</a>
+                      <a href="#" class="speak">Diecko</a>
+                      <a href="#" class="speak">Elektronika</a>
+                      <a href="#" class="speak">Firma i usługi</a>
+                      <a href="#" class="speak">Kolekcje i sztuka</a>
+                      <a href="#" class="speak">Kultura i rozrywka</a>
+                      <a href="#" class="speak">Moda</a>
+                      <a href="#" class="speak">Motoryzacja</a>
+                      <a href="#" class="speak">Nieruchomości</a>
+                      <a href="#" class="speak">Sport i Turystyka</a>
+                      <a href="#" class="speak">Supermarket</a>
+                      <a href="#" class="speak">Uroda</a>
+                      <a href="#" class="speak">Zdrowie</a>
+                      <hr>
+                      <a href="#" class="speak">Cele charytatywne</a>
+                      <a href="#" class="speak">Organizacje charytatywne</a>
+                      <a href="#" class="speak">Sprzedawcy</a>
+                      <a href="#" class="speak">Zakończone</a>
+                      
+                  </div>
+              </span>
+              <button class="search-button speak">SZUKAJ</button>
+              <div class="icons">
+                <a href="#"><img src="./svg/delivery.svg" data-light="./svg/delivery.svg" data-dark="./svg/deliverylight.svg" alt="Przesyłki" class="icon-look"></a>
+                <a href="#"><img src="./svg/fav.svg" data-light="./svg/fav.svg" data-dark="./svg/favlight.svg" alt="Ulubione" class="icon-look"></a>
+                <a href="#"><img src="./svg/chat.svg" data-light="./svg/chat.svg" data-dark="./svg/chatlight.svg" alt="Czat" class="icon-look"></a>
+                <a href="#"><img src="./svg/notify.svg" data-light="./svg/notify.svg" data-dark="./svg/notifylight.svg" alt="Powiadomienia" class="icon-look"></a>
+                <a href="#"><img src="./svg/orders.svg" data-light="./svg/orders.svg" data-dark="./svg/orderslight.svg" alt="Mój koszyk" class="icon-look"></a>
+            </div>                 
+              <span class="user speak" tabindex="0">Moje Allegro
+                <img src="./svg/arrow.svg" alt="arrow" class="arrow-icon2" data-light="./svg/arrow.svg" data-dark="./svg/arrowlight.svg">
+                  <div class="dropdown-menu" id="dropdownMenu">
+                  <a href="#" class="speak">Moje zakupy</a>
+                  <a href="#" class="speak">Kup ponownie</a>
+                  <a href="#" class="speak">Licytuję</a>
+                  <a href="#" class="speak">Ulubione</a>
+                  <a href="#" class="speak">Oceń produkty <span class="new">NOWOŚĆ</span></a>
+                  <a href="#" class="speak">Oceń sprzedawcę</a>
+                  <hr>
+                  <a href="#" class="speak">Allegro Smart!</a>
+                  <a href="#" class="speak">Kupony i karty podarunkowe</a>
+                  <a href="#" class="speak">Smart! Monety</a>
+                  <a href="#" class="speak" id="openSecondPopupLink">Ustawienia</a>
+                  </div>
+                </span>
+          </div>  
+      </div>
+  </div>
+<div class="underheader">
+  <div class="under-section">
+      <span class="category-under speak" id="categoryTrigger" tabindex="0">
+          Kategorie
+          <img src="./svg/arrow.svg" alt="arrow" class="arrow-icon3" data-light="./svg/arrow.svg" data-dark="./svg/arrowlight.svg">
+          <div class="dropdown-menu-category-under" id="dropdownMenuCategory">
+              <ul class="categories">
+                  <!-- Kategorie generowane dynamicznie -->
+              </ul>
+              <div class="subcategories">
+                  <ul id="subCategoriesList">
+                      <!-- Podkategorie będą się tutaj wyświetlały -->
+                  </ul>
+              </div>
+          </div>
+      </span>
+      <div class="cateallegro">
+        <span tabindex="0" class="speak"><img src="./svg/Days.svg" alt="Allegro Days" data-light="./svg/Days.svg" data-dark="./svg/Dayslight.svg"> Allegro Days</span>
+        <span tabindex="0" class="speak"><img src="./svg/protect.svg" alt="Allegro Protect" data-light="./svg/protect.svg" data-dark="./svg/protectlight.svg"> Allegro Protect</span>
+        <span tabindex="0" class="speak"><img src="./svg/sell allegro.svg" alt="Sprzedawaj na Allegro" data-light="./svg/sell allegro.svg" data-dark="./svg/sell allegrolight.svg"> Sprzedawaj na Allegro</span>
+        <span tabindex="0" class="speak"><img src="./svg/lowpirce.svg" alt="Gwarancja najniższej ceny" data-light="./svg/lowpirce.svg" data-dark="./svg/lowpircelight.svg"> Gwarancja najniższej ceny</span>
+        <span tabindex="0" class="speak"><img src="./svg/3dots.svg" alt="Trzy Kropki ..." data-light="./svg/3dots.svg" data-dark="./svg/3dotslight.svg"></span>
+    </div>          
+  <span class="smart" tabindex="0">bądź<img src="./svg/smart.svg" alt="bądź smart"></span>
+</div>  
+</section>
+
+<section class="toptop ">
+  <a href="#">Allegro</a><span class="separator"> / </span>
+  <a href="#">Elektronika</a><span class="separator"> / </span>
+  <a href="#">Konsole i automaty</a><span class="separator"> / </span>
+  <a href="#">Sony PlayStation 5 (PS5)</a><span class="separator"> / </span>
+  <a href="#">Konsole</a><span class="separator"> / </span>
+  <a href="#" class="current">Konsola  PlayStation 5 Pro</a>
+</section>
+
+<main class="container">
+  <section class="container-column">
+  <section class="left-box ">
+    <section class="up">
+    <p>Stan: <span class="new">Nowy</span></p>
+    <img src="./img_product_page/action-common-share-8f2e34e3c1.svg">
+    <img src="./img_product_page/action-common-heart-322d64f02b.svg">
+    </section>
+    <h1>Konsola Sony PlayStation 5 Pro 2TB PS5 Digital Bez Napędu</h1>
+    <p class="os">2 osoby kupiły ostatnio</p>
+    <img src="./img_product_page/ps5.webp" class="laptop" id="mainImage">
+  <section class="galeria">
+      <img src="./img_product_page/ps5.webp" class="mini">
+      <img src="./img_product_page/ps51.png" class="mini">
+      <img src="./img_product_page/ps52.png" class="mini">
+      <img src="./img_product_page/pad.png" class="mini">
+      <img src="./img_product_page/ps54.png" class="mini">
+      <img src="./img_product_page/ps52.png" class="mini">
+      <img src="./img_product_page/ps51.png" class="mini">
+  </section>
+  </section>
+
+  
+  <section class="left-box ">
+      <h2>Parametry</h2>
+      <section class="product-info">
+        <section class="row">
+        <span class="label">Stan</span>
+        <span class="value highlight">Nowy</span>
+        </section>
+        <section class="row">
+        <span class="label">Faktura</span>
+        <span class="value">Wystawiam fakturę VAT</span>
+        </section>
+        <section class="row">
+        <span class="label">Waga produktu z opakowaniem jednostkowym</span>
+        <span class="value highlight">5.035 kg</span>
+        </section>
+        <section class="row">
+        <span class="label">EAN (GTIN)</span>
+        <span class="value">0711719577478</span>
+        </section>
+        <section class="row">
+        <span class="label">Kod producenta</span>
+        <span class="value">CFI-2016</span>
+        </section>
+        
+        <seection class="row">
+        <span class="label">Wersja</span>
+        <span class="value">PlayStation 5 Pro</span>
+        </seection>
+        <section class="row">
+        <span class="label">Informacje o bezpieczeństwie</span>
+        <span class="value">CE</span>
+        </section>
+        <section class="full-width-line">
+        <a href="#">WSZYSTKIE PARAMETRY</a>
+        </section>
+      </section>
+  </section>
+
+  <section class="left-box ">
+    <h2>Opis</h2>
+    <h3>Konsola Sony PlayStation 5 Pro 2TB PS5 Digital Bez Napędu</h3>
+    <div class="product-container">
+      <div class="product-text">
+          <h2>2 TB pamięci masowej</h2>
+          <p>
+            Dzięki 2 TB pamięci SSD możesz błyskawicznie zacząć grać w swoje ulubione gry. Konsola Sony PlayStation 5 Pro jest wyposażona w ulepszony procesor graficzny, który ma aż o 67% więcej jednostek obliczeniowych niż standardowy model PS5 oraz o 28% szybszą pamięć.Dzięki temu możesz cieszyć się jeszcze płynniejszą rozgrywką w rozdzielczości 4K przy wyższej liczbie klatek na sekundę, a także krótszymi czasami ładowania. Dodatkowo, zaawansowany system chłodzenia zapewnia stabilną wydajność nawet podczas najbardziej wymagających sesji gamingowych.
+          </p>
+      </div>
+      <div class="product-image">
+        <img src="./img_product_page/ps5.webp" >
+      </div>
+  </div>
+  <div class="product-container">
+    <div class="product-text">
+        <h2 class="large">Łączność bezprzewodowa na zupełnie nowym poziomie</h2>
+        <p>
+          PS5 Pro obsługuje rozszerzone możliwości bezprzewodowego Internetu i większą przepustowość, zwiększając szybkość transmisji dzięki IEEE 802.11be i zgodnemu routerowi, co oznacza, że podczas gry online możesz zauważyć zmniejszone opóźnienie i większą stabilność.
+        </p>
+    </div>
+    <div class="product-image">
+      <img src="./img_product_page/ps51.png"class="one" >
+    </div>
+</div>
+<div class="product-container">
+  <div class="product-text">
+      <h2 class="large">PS5 ProGame Boost i wsteczna kompatybilność.</h2>
+      <p>
+        Na konsoli PS5 Pro można grać w ponad 8500 gier na PS4™. Dzięki funkcji Game Boost w wersji na PS5 Pro będziesz cieszyć się większą, bardziej płynną szybkością klatek w niektórych z najlepszych gier na konsole PS4 i PS5.
+      </p>
+  </div>
+  <div class="product-image">
+    <img src="./img_product_page/ps52.png"class="one" >
+  </div>
+</div>
+<div class="product-container">
+  <div class="product-text">
+      
+      <h2 class="large">Kontroler bezprzewodowy DualSense</h2>
+      <p>
+        Wykorzystaj moc PS5 Pro dzięki niesamowitym funkcjom dotykowym innowacyjnego kontrolera bezprzewodowego DualSense. Grając za pomocą kontrolera bezprzewodowego DualSense, możesz korzystać z efektów dotykowych w wybranych grach na PS5. Poznaj możliwości adaptacyjnych efektów „Trigger” w wybranych tytułach na PS5. Dzięki precyzyjnym efektom dotykowym poczujesz każdy ruch, wstrząs i napięcie, co sprawi, że rozgrywka stanie się jeszcze bardziej immersyjna. Dodatkowo, wbudowany mikrofon i głośnik w kontrolerze DualSense pozwolą Ci lepiej komunikować się z drużyną oraz doświadczyć dźwięku w zupełnie nowy sposób.
+      </p>
+  </div>
+  <div class="product-image">
+    <img src="./img_product_page/pad.png"class="two" >
+  </div>
+</div>
+<div class="product-container">
+  <div class="product-text">
+      <h2 class="large">Stworzone z myślą o błyskawicznej prędkości</h2>
+      <p>
+        Zainstalowane na konsoli PS5 gry będą ładować się w mgnieniu oka. Dzięki niestandardowej integracji systemów konsoli PS5 Pro dane z dysku SSD są odczytywane z zawrotną szybkością, co daje twórcom gier nieosiągalne dotąd możliwości. Najdrobniejsze szczegóły ożywają na ekranie telewizora 4K w zgodnych grach na PS5.
+      </p>
+  </div>
+  <div class="product-image">
+    <img src="./img_product_page/ps54.png"class="one" >
+  </div>
+</div>
+
+<div class="product-container">
+  <div class="product-text">
+    <h2 class="xlarge">Dane techniczne</h2>
+    <li><strong>Procesor:</strong> 8 rdzeni AMD Zen 2 - do 3.9 GHz</li>
+    <li><strong>Pamięć:</strong> RAM 16 GB</li>
+    <li><strong>Chip graficzny:</strong> AMD RDNA 3 33,5 TFLOPS</li>
+    <li><strong>Wyposażenie:</strong> Kontroler w zestawie</li>
+    <li><strong>Odtwarza pliki wideo (filmy):</strong> tak</li>
+    <li><strong>Wi-Fi:</strong> tak</li>
+    <li><strong>Bluetooth:</strong> tak</li>
+    <li><strong>Pamięć:</strong>2 TB</li>
+    <li><strong>Złącza:</strong>  Wyjście wideo - Port HDMI OUT, wsparcie telewizorów 4K 120 Hz, telewizorów 8K, VRR (obsługiwane przez HDMI 2.1). Dźwięk - „Tempest” 3D AudioTech</li>
+    <li><strong>Gry w zestawie:</strong> Astro's Playroom</li>
+    
+  </div>
+  
+</div>
+<div class="images">
+  <img src="./img_product_page/ps5.webp" >
+  <img src="./img_product_page/ps51.png" >
+</div>
+<div class="images">
+  <img src="./img_product_page/ps52.png" >
+  <img src="./img_product_page/pad.png" >
+</div>
+  </section>
+  </section>
+
+<section class="container-column">
+  <section class="right-box">
+      <p class="od">od xyz.pl</p>
+      <section class="info">
+        <img src="./img_product_page/information-common-super-seller-236577cfa7.svg" class="icon"> 
+        <span class="divider"></span>
+        <p>Firma</p>
+        <span class="divider"></span>
+        <span class="recommendation">poleca 99,7%</span>
+      </section>
+      <hr class="full">
+      <p class="super">SUPERCENA</p>
+      <section class="cena">
+      <p>3499,<span class="zl">00 zł</span></p>
+      <img src="./img_product_page/smart 1.svg">
+    </section>
+    <section class="check ">
+      <p>zapłać później z</p>
+      <img src="./img_product_page/pay 8.png">
+      <p>sprawdź</p>
+    </section>
+    <p class="os">2 osoby kupiły tę ofertę</p>
+    <hr>
+    <p class="dostawa">dostawa jutro <span class="do">do 6 miast</span><span class="info-icon">ⓘ</span></p>
+    <hr>
+    <p class="szt">Liczba sztuk</p>
+    <section class="quantity-container">
+      <button>-</button>
+      <input type="text" value="1" readonly>
+      <button>+</button>
+      <span class="z">z 21 sztuk</span>
+    </section>
+  <section class="buttons">
+      <button class="button">Dodaj do koszyka</button>
+      <button class="button">Kup i zapłać</button>
+  </section>
+<p class="leasing">Masz firmę? Weź leasing</p>
+  </section>
+
+  <section class=" right-box">
+    <section class="qwe">
+      <img src="./img_product_page/clock.png">
+      <p>Jutro u Ciebie do 6 miast</p>
+    </section>
+    <hr>
+    <section class="qwi">
+      <img src="./img_product_page/deliverytruck.png">
+      <section class="row">
+      <p >Dostawa od 10,99 zł</p>
+      <img src="./img_product_page/arrow.png">
+    </section>
+    </section>
+    <hr>
+    <section class="qwi">
+      <img src="./img_product_page/shield.png" class="shield">
+      <section class="row">
+      <p>Zwrot za darmo - 14 dni<br><span class="down">Reklamacja | Alledrogo Protect</span></p>
+      <img src="./img_product_page/arrow.png">
+    </section>
+    </section>
+    <hr>
+    <section class="qwi">
+      <img src="./img_product_page/wallet.png">
+      <section class="row">
+      <p>Metody płatności<br><span class="down">Płać tak, jak lubisz</span></p>
+      <img src="./img_product_page/arrow.png">
+    </section>
+    </section>
+  </section>
+
+  <section class=" right-box">
+    <h2>Inne oferty produktu<span class="info-icon">ⓘ</span></h2>
+    <p class="inne">Konsola Sony PlayStation 5 Pro 2TB PS5 <br>Digital Bez Napędu</p>
+    <p class="nn">NAJTAŃSZE - NOWE</p>
+    <section class="cenasm">
+      <p>3499,<span class="zl">00 zł</span></p>
+      <img src="./img_product_page/smart 1.svg">
+      <img src="./img_product_page/arrow.png"class="arrow">
+    </section>
+    <p class="stan">Stan: Nowy</p>
+    <hr>
+    <p class="nn">NAJSZYBCIEJ</p>
+    <section class="cenasm">
+      <p>3499,<span class="zl">00 zł</span></p>
+      <img src="./img_product_page/smart 1.svg">
+      <img src="./img_product_page/arrow.png"class="arrow">
+    </section>
+    <p class="stan">dostawa: pojutrze</p>
+</section>
+
+<section class=" right-box">
+  <p class="sell">Sprzedaż i wysyłka:</p>
+  <p class="od">od xyz.pl</p>
+  <section class="infox">
+    <img src="./img_product_page/information-common-super-seller-236577cfa7.svg" class="icon"> 
+    <p>Super Sprzedawca</p>
+    <span class="divider"></span>
+    <p>Firma</p>
+  </section>
+  <hr class="full">
+  <section class="rate">
+    <p>99,7%</p>
+    <p class="po">kupujących poleciło tego sprzedawcę w<br> ostatnich 12 miesiącach</p>
+  </section>
+  <hr class="full">
+  <p class="teal">Inne przedmioty sprzedającego z kategorii <strong>Konsole</strong></p>
+  <hr>
+  <p class="tealx">Wszystkie przedmioty sprzedającego</p>
+  <hr class="full">
+  <section class="infoxy">
+    <p>O sprzedającym</p>
+    <span class="divider"></span>
+    <p>Zadaj pytanie</p>
+  </section>
+</section>
+<div class="phone-footer">
+  <a href="#">Dostawy<img src="./svg/delivery.svg" data-light="./svg/delivery.svg" data-dark="./svg/deliverylight.svg" alt="Przesyłki" class="icon-look"></a>
+  <a href="#">Ulubione<img src="./svg/fav.svg" data-light="./svg/fav.svg" data-dark="./svg/favlight.svg" alt="Ulubione" class="icon-look"></a>
+  <a href="#">Wiadomości<img src="./svg/chat.svg" data-light="./svg/chat.svg" data-dark="./svg/chatlight.svg" alt="Czat" class="icon-look"></a>
+  <a href="#">Powiadomienia<img src="./svg/notify.svg" data-light="./svg/notify.svg" data-dark="./svg/notifylight.svg" alt="Powiadomienia" class="icon-look"></a>
+  <a href="#">Koszyk<img src="./svg/orders.svg" data-light="./svg/orders.svg" data-dark="./svg/orderslight.svg" alt="Mój koszyk" class="icon-look"></a>
+</div> 
+</section>
+</main>
+<section class="footer-section" id="footer-container"></section>
+  <script src="./Script/Footer.js"></script>
+  <script src="./Script/HeaderPopup_nr.1.js"></script>
+  <script src="./Script/HeaderPopup_nr.2.js"></script>
+  <script src="./Script/HeaderPopup_nr.3.js"></script>
+  <script src="./Script/UnderHeaderPopup_nr.1.js"></script>  
+  <script src="./Script/Products_view_Main.js"></script>   
+</body>
+</html>
+
+

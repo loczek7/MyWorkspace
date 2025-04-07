@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allegro Search Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles/IPhone_product.css">
+<link rel="stylesheet" href="./styles/components.css">
+<link rel="stylesheet" href="./styles/layout.css">
+<link rel="stylesheet" href="./styles/themeProductPage.css">
+<link rel="stylesheet" href="./styles/variables.css">
+<link rel="stylesheet" href="./styles/reset.css">
+</head>
+
+<body>
+   <!-- Header Section -->
+  <section class="header">
+    <div class="up-section">
+        <div class="in-section">
+            <a class="logo speak" href="Alledrogo_main_page.html">alledrogo</a>
+            <div class="search-container">
+                <input class="searchbar speak" type="text" placeholder="czego szukasz?"><!--Tutaj nie działa jeszcze speak-->
+                <span class="search-label speak" id="searchLabel" tabindex="0">szukaj wielu</span>
+
+                <span class="category speak" id="searchLabelCategory" tabindex="0">
+                    Wszystkie kategorie
+                    <img src="./svg/arrow.svg" alt="arrow" class="arrow-icon" data-light="./svg/arrow.svg" data-dark="./svg/arrowlight.svg">
+                    <div class="dropdown-menu-category" id="dropdownMenuSearchLabelCategory">
+                        <a href="#" class="speak">Allegro days</a>
+                        <hr>
+                        <a href="#" class="speak">Dom i Ogród</a>
+                        <a href="#" class="speak">Diecko</a>
+                        <a href="#" class="speak">Elektronika</a>
+                        <a href="#" class="speak">Firma i usługi</a>
+                        <a href="#" class="speak">Kolekcje i sztuka</a>
+                        <a href="#" class="speak">Kultura i rozrywka</a>
+                        <a href="#" class="speak">Moda</a>
+                        <a href="#" class="speak">Motoryzacja</a>
+                        <a href="#" class="speak">Nieruchomości</a>
+                        <a href="#" class="speak">Sport i Turystyka</a>
+                        <a href="#" class="speak">Supermarket</a>
+                        <a href="#" class="speak">Uroda</a>
+                        <a href="#" class="speak">Zdrowie</a>
+                        <hr>
+                        <a href="#" class="speak">Cele charytatywne</a>
+                        <a href="#" class="speak">Organizacje charytatywne</a>
+                        <a href="#" class="speak">Sprzedawcy</a>
+                        <a href="#" class="speak">Zakończone</a>
+                        
+                    </div>
+                </span>
+                <button class="search-button speak">SZUKAJ</button>
+                <div class="icons">
+                  <a href="#"><img src="./svg/delivery.svg" data-light="./svg/delivery.svg" data-dark="./svg/deliverylight.svg" alt="Przesyłki" class="icon-look"></a>
+                  <a href="#"><img src="./svg/fav.svg" data-light="./svg/fav.svg" data-dark="./svg/favlight.svg" alt="Ulubione" class="icon-look"></a>
+                  <a href="#"><img src="./svg/chat.svg" data-light="./svg/chat.svg" data-dark="./svg/chatlight.svg" alt="Czat" class="icon-look"></a>
+                  <a href="#"><img src="./svg/notify.svg" data-light="./svg/notify.svg" data-dark="./svg/notifylight.svg" alt="Powiadomienia" class="icon-look"></a>
+                  <a href="#"><img src="./svg/orders.svg" data-light="./svg/orders.svg" data-dark="./svg/orderslight.svg" alt="Mój koszyk" class="icon-look"></a>
+              </div>                 
+                <span class="user speak" tabindex="0">Moje Allegro
+                  <img src="./svg/arrow.svg" alt="arrow" class="arrow-icon2" data-light="./svg/arrow.svg" data-dark="./svg/arrowlight.svg">
+                    <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#" class="speak">Moje zakupy</a>
+                    <a href="#" class="speak">Kup ponownie</a>
+                    <a href="#" class="speak">Licytuję</a>
+                    <a href="#" class="speak">Ulubione</a>
+                    <a href="#" class="speak">Oceń produkty <span class="new">NOWOŚĆ</span></a>
+                    <a href="#" class="speak">Oceń sprzedawcę</a>
+                    <hr>
+                    <a href="#" class="speak">Allegro Smart!</a>
+                    <a href="#" class="speak">Kupony i karty podarunkowe</a>
+                    <a href="#" class="speak">Smart! Monety</a>
+                    <a href="#" class="speak" id="openSecondPopupLink">Ustawienia</a>
+                    </div>
+                  </span>
+            </div>  
+        </div>
+    </div>
+ <div class="underheader">
+    <div class="under-section">
+        <span class="category-under speak" id="categoryTrigger" tabindex="0">
+            Kategorie
+            <img src="./svg/arrow.svg" alt="arrow" class="arrow-icon3" data-light="./svg/arrow.svg" data-dark="./svg/arrowlight.svg">
+            <div class="dropdown-menu-category-under" id="dropdownMenuCategory">
+                <ul class="categories">
+                    <!-- Kategorie generowane dynamicznie -->
+                </ul>
+                <div class="subcategories">
+                    <ul id="subCategoriesList">
+                        <!-- Podkategorie będą się tutaj wyświetlały -->
+                    </ul>
+                </div>
+            </div>
+        </span>
+        <div class="cateallegro">
+          <span tabindex="0" class="speak"><img src="./svg/Days.svg" alt="Allegro Days" data-light="./svg/Days.svg" data-dark="./svg/Dayslight.svg"> Allegro Days</span>
+          <span tabindex="0" class="speak"><img src="./svg/protect.svg" alt="Allegro Protect" data-light="./svg/protect.svg" data-dark="./svg/protectlight.svg"> Allegro Protect</span>
+          <span tabindex="0" class="speak"><img src="./svg/sell allegro.svg" alt="Sprzedawaj na Allegro" data-light="./svg/sell allegro.svg" data-dark="./svg/sell allegrolight.svg"> Sprzedawaj na Allegro</span>
+          <span tabindex="0" class="speak"><img src="./svg/lowpirce.svg" alt="Gwarancja najniższej ceny" data-light="./svg/lowpirce.svg" data-dark="./svg/lowpircelight.svg"> Gwarancja najniższej ceny</span>
+          <span tabindex="0" class="speak"><img src="./svg/3dots.svg" alt="Trzy Kropki ..." data-light="./svg/3dots.svg" data-dark="./svg/3dotslight.svg"></span>
+      </div>          
+    <span class="smart" tabindex="0">bądź<img src="./svg/smart.svg" alt="bądź smart"></span>
+  </div>  
+</section>
+
+<section class="toptop ">
+  <a href="#">Allegro</a><span class="separator"> / </span>
+  <a href="#">Elektronika</a><span class="separator"> / </span>
+  <a href="#">Telefony i Akcesoria</a><span class="separator"> / </span>
+  <a href="#">Smartfony i telefony kamórkowe</a><span class="separator"> / </span>
+  <a href="#">Apple</a><span class="separator"> / </span>
+  <a href="#">iPhone 15</a><span class="separator"> / </span>
+  <a href="#" class="current">Smartfon Apple iPhone 15 128 GB 5G niebieski</a>
+</section>
+
+<main class="container">
+  <section class="container-column">
+  <section class="left-box ">
+    <section class="up">
+    <p>Stan: <span class="new">Nowy</span></p>
+    <img src="./img_product_page/action-common-share-8f2e34e3c1.svg">
+    <img src="./img_product_page/action-common-heart-322d64f02b.svg">
+    </section>
+    <h1>Smartfon Apple iPhone 15 128 GB 5G Blue</h1>
+    <p class="os">2 osoby kupiły ostatnio</p>
+    <img src="./img_product_page/Smartfon-APPLE-iPhone-15-128GB-5G-6.1-Niebieski-front-tyl.jpg" class="laptop" id="mainImage">
+  <section class="galeria">
+      <img src="./img_product_page/Smartfon-APPLE-iPhone-15-128GB-5G-6.1-Niebieski-front-tyl.jpg" class="mini">
+      <img src="./img_product_page/ip15.jpg" class="mini">
+      <img src="./img_product_page/ip152.jpg" class="mini">
+      <img src="./img_product_page/ip153.jpg" class="mini">
+      <img src="./img_product_page/ip154.jpg" class="mini">
+      <img src="./img_product_page/ip152.jpg" class="mini">
+      <img src="./img_product_page/ip15.jpg" class="mini">
+  </section>
+  </section>
+
+  <section class="left-box ">
+    <h2>Kup razem</h2>
+    <section class="bundle">
+      <section class="bundle-images">
+        <img src="./img_product_page/Smartfon-APPLE-iPhone-15-128GB-5G-6.1-Niebieski-front-tyl.jpg">
+        <span class="plus">+</span>
+        <img src="./img_product_page/Apple-Beats-Studio-Buds-douszne-sluchawki-bezprzewodowe-z-redukcja-halasu-biale-22605-680x680.webp">
+      </section>
+      <section class="bundle-info">
+        <p class="productx">
+        <a href="#">Smartfon Apple iPhone 15 <br>128 GB 5G Blue</a>
+        <span class="price">3499,00 zł</span>
+        </p>
+        <p class="productx">
+        <a href="#">Apple Beats Studio Buds douszne słuchawki <br>bezprzewodowe z redukcją hałasu - białe</a>
+        <span class="price">649,00 zł</span>
+        </p>
+        <p class="total-price">cena razem <span class=big>4148,</span><span class=small>00 zł</span></p>
+        <button class="add-to-cart">DODAJ ZESTAW DO KOSZYKA</button>
+      </section>
+    </section>
+  </section>
+
+  
+  <section class="left-box ">
+      <h2>Parametry</h2>
+      <section class="product-info">
+        <section class="row">
+        <span class="label">Stan</span>
+        <span class="value highlight">Nowy</span>
+        </section>
+        <section class="row">
+        <span class="label">Faktura</span>
+        <span class="value">Wystawiam fakturę VAT</span>
+        </section>
+        <section class="row">
+        <span class="label">Marka telefonu</span>
+        <span class="value highlight">Apple</span>
+        </section>
+        <section class="row">
+        <span class="label">Model telefonu</span>
+        <span class="value">iPhone 15</span>
+        </section>
+        <section class="row">
+        <span class="label">Kod producenta</span>
+        <span class="value">MTP43SX/A</span>
+        </section>
+        
+        <seection class="row">
+        <span class="label">Typ</span>
+        <span class="value">Smartfon</span>
+        </seection>
+        <section class="row">
+        <span class="label">EAN (GTIN)</span>
+        <span class="value">0195949036521</span>
+        </section>
+        <seection class="row">
+          <span class="label">Kolor</span>
+          <span class="value">niebieski</span>
+          </seection>
+        <section class="full-width-line">
+        <a href="#">WSZYSTKIE PARAMETRY</a>
+        </section>
+      </section>
+  </section>
+
+  <section class="left-box ">
+    <h2>Opis</h2>
+    <h3>Smartfon Apple iPhone 15 6 GB/128 GB 5G Blue</h3>
+    <div class="product-container">
+      <div class="product-text">
+          <h2>Nowe portrety. Fokus, pokus, pstryk i łał.</h2>
+          <p>
+            Portrety Twojego autorstwa będą zachwycać dzięki precyzyjnym detalom i intensywnym barwom. Teraz możesz jednym stuknięciem zmienić punkt ostrości na innym obiekcie – nawet po wykonaniu zdjęcia. To prawdziwa magia. Chcesz uchwycić ulotny moment? Nie musisz ręcznie przełączać się na tryb Portret. iPhone 15 automatycznie zapisze informacje o głębi ostrości, gdy fotografujesz człowieka, kota lub psa. Dzięki temu możesz od razu cieszyć się zdjęciem z pięknie rozmytym tłem albo dodać ten efekt później w aplikacji Zdjęcia.
+          </p>
+      </div>
+      <div class="product-image">
+        <img src="./img_product_page/Smartfon-APPLE-iPhone-15-128GB-5G-6.1-Niebieski-front-tyl.jpg" >
+      </div>
+  </div>
+  <div class="product-container">
+    <div class="product-text">
+        <h2 class="large">Przybliż zbliżenie.</h2>
+        <p>
+          Dzięki zoomowi 2x o jakości optycznej możesz uchwycić idealny portret, nawet bez podchodzenia blisko do fotografowanego obiektu. A jeśli to wciąż za mało, płynny zoom pozwoli Ci jeszcze bardziej przybliżyć obraz, zachowując wysoką jakość. Bez względu na to, czy fotografujesz bliskich, zwierzęta czy krajobrazy, każdy detal pozostanie ostry i pełen głębi. Zaawansowana technologia przetwarzania obrazu dba o naturalne kolory i wyrazisty kontrast, dzięki czemu Twoje zdjęcia zawsze wyglądają imponująco.
+        </p>
+    </div>
+    <div class="product-image">
+      <img src="./img_product_page/ip153.jpg"class="one" >
+    </div>
+</div>
+<div class="product-container">
+  <div class="product-text">
+      <h2 class="large">Photonic Engine. Fantastyczne fotki.</h2>
+      <p>
+        Nowy Photonic Engine sprawia, że portrety wyglądają jeszcze lepiej. Wykorzystuje najwyższej jakości piksele z ultrawysokiej rozdzielczości i łączy je ze zdjęciem zoptymalizowanym pod kątem światła. Efektem jest obraz o rozdzielczości 24 MP – dwa razy większej niż standardowo, a jednocześnie w pliku na tyle kompaktowym, że bez problemu go przechowasz i udostępnisz. Idealne rozwiązanie na codzienne fotografowanie.
+      </p>
+  </div>
+  <div class="product-image">
+    <img src="./img_product_page/ip152.jpg"class="one" >
+  </div>
+</div>
+<div class="product-container">
+  <div class="product-text">
+      
+      <h2 class="large">Czip A16 Bionic. Megamoc Pro.</h2>
+      <p>
+        Czip A16 Bionic napędza przeróżne zaawansowane rozwiązania. To dzięki niemu możesz robić zdjęcia 24 MP i jeszcze lepsze portrety z artystycznym rozmyciem tła. Jego moc odpowiada też za izolowanie głosu podczas połączeń telefonicznych, co sprawia, że rozmowy są jeszcze wyraźniejsze, oraz za niezwykłą płynność gier o intensywnej grafice. Wszystko to działa z wyjątkową energooszczędnością, co przekłada się na dłuższy czas pracy na baterii – nawet przy wymagających zadaniach. Do tego dochodzi błyskawiczne przetwarzanie danych i większa responsywność systemu, dzięki czemu codzienne korzystanie z iPhone’a jest jeszcze płynniejsze. Wiadomo dlaczego: A16 Bionic zaczynał karierę od modeli Pro i teraz wnosi najwyższą wydajność do Twoich rąk.
+      </p>
+  </div>
+  <div class="product-image">
+    <img src="./img_product_page/ip15.jpg"class="two" >
+  </div>
+</div>
+<div class="product-container">
+  <div class="product-text">
+      <h2 class="large">USB-C. Kompatybilność.</h2>
+      <p>
+        Nowe złącze USB-C pozwala ładować Maca i iPada tym samym przewodem, którym ładujesz iPhone’a 15. A nawet ładować Apple Watch lub AirPods bezpośrednio z iPhone’a 15. Żegnajcie, kłęby kabli. Teraz jedno złącze wystarczy do wielu urządzeń, co sprawia, że Twoje życie staje się prostsze i bardziej zorganizowane. Złącze USB-C to nie tylko wygoda, ale i szybkie ładowanie, które zaoszczędzi Ci czas. Niezależnie od tego, gdzie jesteś – wszystko, co potrzebujesz, mieści się w jednym kablu.
+      </p>
+  </div>
+  <div class="product-image">
+    <img src="./img_product_page/ip154.jpg"class="one" >
+  </div>
+</div>
+
+<div class="product-container">
+  <div class="product-text">
+    <h2 class="xlarge">Dane techniczne</h2>
+    <li><strong>Wyświetlacz:</strong> 6.1", 2532 x 1170px, OLED, Super Retina XDR </li>
+    <li><strong>Pamięć wbudowana:</strong> 128 GB</li>
+    <li><strong>Aparat:</strong> Tylny 48 Mpx + 12 Mpx, Przedni 12 Mpx</li>
+    <li><strong>Model procesora:</strong> Apple A16 Bionic</li>
+    <li><strong>Liczba rdzeni procesora:</strong> Sześciordzeniowy </li>
+    <li><strong>System operacyjny:</strong> iOS </li>
+    <li><strong>Wersja systemu:</strong> iOS 17 </li>
+    <li><strong>NFC:</strong>Tak </li>
+    <li><strong>5G:</strong> Tak </li>
+    <li><strong>Kolor obudowy:</strong> Niebieski </li>
+    
+  </div>
+  
+</div>
+<div class="images">
+  <img src="./img_product_page/Smartfon-APPLE-iPhone-15-128GB-5G-6.1-Niebieski-front-tyl.jpg" >
+  <img src="./img_product_page/ip15.jpg" >
+</div>
+<div class="images">
+  <img src="./img_product_page/ip152.jpg" >
+  <img src="./img_product_page/ip153.jpg" >
+</div>
+  </section>
+  </section>
+
+<section class="container-column">
+  <section class="right-box">
+      <p class="od">od xyz.pl</p>
+      <section class="info">
+        <img src="./img_product_page/information-common-super-seller-236577cfa7.svg" class="icon"> 
+        <span class="divider"></span>
+        <p>Firma</p>
+        <span class="divider"></span>
+        <span class="recommendation">poleca 99,7%</span>
+      </section>
+      <hr class="full">
+      <p class="super">SUPERCENA</p>
+      <section class="cena">
+      <p>3499,<span class="zl">00 zł</span></p>
+      <img src="./img_product_page/smart 1.svg">
+    </section>
+    <section class="check ">
+      <p>zapłać później z</p>
+      <img src="./img_product_page/pay 8.png">
+      <p>sprawdź</p>
+    </section>
+    <p class="os">2 osoby kupiły tę ofertę</p>
+    <hr>
+    <p class="dostawa">dostawa jutro <span class="do">do 6 miast</span><span class="info-icon">ⓘ</span></p>
+    <hr>
+    <p class="szt">Liczba sztuk</p>
+    <section class="quantity-container">
+      <button>-</button>
+      <input type="text" value="1" readonly>
+      <button>+</button>
+      <span class="z">z 21 sztuk</span>
+    </section>
+  <section class="buttons">
+      <button class="button">Dodaj do koszyka</button>
+      <button class="button">Kup i zapłać</button>
+  </section>
+<p class="leasing">Masz firmę? Weź leasing</p>
+  </section>
+
+  <section class=" right-box">
+    <section class="qwe">
+      <img src="./img_product_page/clock.png">
+      <p>Jutro u Ciebie do 6 miast</p>
+    </section>
+    <hr>
+    <section class="qwi">
+      <img src="./img_product_page/deliverytruck.png">
+      <section class="row">
+      <p >Dostawa od 10,99 zł</p>
+      <img src="./img_product_page/arrow.png">
+    </section>
+    </section>
+    <hr>
+    <section class="qwi">
+      <img src="./img_product_page/shield.png" class="shield">
+      <section class="row">
+      <p>Zwrot za darmo - 14 dni<br><span class="down">Reklamacja | Alledrogo Protect</span></p>
+      <img src="./img_product_page/arrow.png">
+    </section>
+    </section>
+    <hr>
+    <section class="qwi">
+      <img src="./img_product_page/wallet.png">
+      <section class="row">
+      <p>Metody płatności<br><span class="down">Płać tak, jak lubisz</span></p>
+      <img src="./img_product_page/arrow.png">
+    </section>
+    </section>
+  </section>
+
+  <section class=" right-box">
+    <h2>Inne oferty produktu<span class="info-icon">ⓘ</span></h2>
+    <p class="inne">Smartfon Apple iPhone 15 128 GB 5G Blue</p>
+    <p class="nn">NAJTAŃSZE - NOWE</p>
+    <section class="cenasm">
+      <p>3499,<span class="zl">00 zł</span></p>
+      <img src="./img_product_page/smart 1.svg">
+      <img src="./img_product_page/arrow.png"class="arrow">
+    </section>
+    <p class="stan">Stan: Nowy</p>
+    <hr>
+    <p class="nn">NAJSZYBCIEJ</p>
+    <section class="cenasm">
+      <p>3499,<span class="zl">00 zł</span></p>
+      <img src="./img_product_page/smart 1.svg">
+      <img src="./img_product_page/arrow.png"class="arrow">
+    </section>
+    <p class="stan">dostawa: pojutrze</p>
+</section>
+
+<section class=" right-box">
+  <p class="sell">Sprzedaż i wysyłka:</p>
+  <p class="od">od xyz.pl</p>
+  <section class="infox">
+    <img src="./img_product_page/information-common-super-seller-236577cfa7.svg" class="icon"> 
+    <p>Super Sprzedawca</p>
+    <span class="divider"></span>
+    <p>Firma</p>
+  </section>
+  <hr class="full">
+  <section class="rate">
+    <p>99,7%</p>
+    <p class="po">kupujących poleciło tego sprzedawcę w<br> ostatnich 12 miesiącach</p>
+  </section>
+  <hr class="full">
+  <p class="teal">Inne przedmioty sprzedającego z kategorii <strong>Smartfony</strong></p>
+  <hr>
+  <p class="tealx">Wszystkie przedmioty sprzedającego</p>
+  <hr class="full">
+  <section class="infoxy">
+    <p>O sprzedającym</p>
+    <span class="divider"></span>
+    <p>Zadaj pytanie</p>
+  </section>
+</section>
+<div class="phone-footer">
+  <a href="#">Dostawy<img src="./svg/delivery.svg" data-light="./svg/delivery.svg" data-dark="./svg/deliverylight.svg" alt="Przesyłki" class="icon-look"></a>
+  <a href="#">Ulubione<img src="./svg/fav.svg" data-light="./svg/fav.svg" data-dark="./svg/favlight.svg" alt="Ulubione" class="icon-look"></a>
+  <a href="#">Wiadomości<img src="./svg/chat.svg" data-light="./svg/chat.svg" data-dark="./svg/chatlight.svg" alt="Czat" class="icon-look"></a>
+  <a href="#">Powiadomienia<img src="./svg/notify.svg" data-light="./svg/notify.svg" data-dark="./svg/notifylight.svg" alt="Powiadomienia" class="icon-look"></a>
+  <a href="#">Koszyk<img src="./svg/orders.svg" data-light="./svg/orders.svg" data-dark="./svg/orderslight.svg" alt="Mój koszyk" class="icon-look"></a>
+</div> 
+</section>
+</main>
+<section class="footer-section" id="footer-container"></section>
+  <script src="./Script/Footer.js"></script>
+  <script src="./Script/HeaderPopup_nr.1.js"></script>
+  <script src="./Script/HeaderPopup_nr.2.js"></script>
+  <script src="./Script/HeaderPopup_nr.3.js"></script>
+  <script src="./Script/UnderHeaderPopup_nr.1.js"></script>  
+  <script src="./Script/Products_view_Main.js"></script>   
+</body>
+</html>
+
+

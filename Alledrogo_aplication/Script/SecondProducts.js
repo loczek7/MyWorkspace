@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
     
     const container = document.getElementById('second-product-container');
-    for (let i = 0; i < 3; i++) { // Powielanie każdego produktu 3 razy
+    for (let i = 0; i < 3; i++) {
         products.forEach(product => {
         
             const productDiv = document.createElement('div');
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             productDiv.setAttribute('tabindex', '0');
             
             productDiv.innerHTML = `
+                <a href="Products_view.html">
                 <img src="${product.img}" alt="${product.title}">
                 <div class="smart-deal">
                     <div class="top">
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="delivery">
                     <p>Dostawa we wtorek<span class="info-icon">ⓘ</span></p>
                 </div>
+                </a>
             `;
             
             container.appendChild(productDiv);
